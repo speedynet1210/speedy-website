@@ -6,6 +6,7 @@ import SatelliteFeature from "./components/sections/SatelliteFeature";
 import About from "./components/sections/About"; // <--- Import About
 import Contact from "./components/sections/Contact";
 import Footer from "./components/layout/Footer";
+import ChatForgeWidget from "./components/ChatForgeWidget";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <ChatForgeWidget />
     </div>
   );
 }

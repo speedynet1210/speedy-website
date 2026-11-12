@@ -8,6 +8,11 @@ RUN npm ci
 
 COPY . .
 
+# Public ChatForge widget key, baked in by Vite at build time.
+# Set it as a build-time variable in Coolify (or `--build-arg`).
+ARG VITE_CHATFORGE_API_KEY
+ENV VITE_CHATFORGE_API_KEY=$VITE_CHATFORGE_API_KEY
+
 RUN npm run build
 
 # Runtime stage: serve the static files with nginx
